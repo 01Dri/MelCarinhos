@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getCaring() {
+        var text = document.getElementById('textCaring');
+        var img = document.getElementById('imgSad');
+        text.innerHTML = "Agora mel está feliz!!!"
+        img.src = 'feliz.png';
+
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        .centered-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #textCaring {
+            font-size: 24px;
+        }
+
+        .imgSad {
+            width: 250px;
+        }
+
+        .bu {
+            background-color: rgb(223, 109, 128);
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            
+        }
+
+    </style>
+    <div class="centered-container">
+        <h1 id="textCaring">Mel está triste, faça um carinho nela</h1>
+        <img src="triste.png" alt="Mel triste" id="imgSad" class="imgSad">
+        <button class="bu" id="bu" onclick="getCaring()">Carinho</button>
+      </div>
+      
+</body>
+</html>
