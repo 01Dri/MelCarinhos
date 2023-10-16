@@ -13,16 +13,16 @@
         let numRandom = nums[(Math.random() * nums.length | 0)];
         let numCaring = 1;
         function showMessage(value) {
-            document.getElementById('textCaring').innerHTML = `Mel está triste, ela precisa de ${value} carinho para ficar feliz :(`;
+            if (numRandom > 1) {
+                document.getElementById('textCaring').innerHTML = `Mel está triste, ela precisa de ${value} carinhos para ficar feliz :(`;
+            } else {
+                document.getElementById('textCaring').innerHTML = `Mel está triste, ela precisa de ${value} carinho para ficar feliz :(`;
+            }
 
         };
 
         window.onload = function() {    
-            if (numRandom == 1) {
-                showMessage(numRandom);
-            } else {
-                showMessage(numRandom);
-            }
+            showMessage(numRandom);
         };
         
         function getCaring() {
