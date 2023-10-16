@@ -34,6 +34,8 @@
                 var img = document.getElementById('imgSad');
                 text.innerHTML = "Agora Mel está feliz!!!"
                 img.src = 'feliz.png';
+                var button = document.getElementById('bu');
+                button.remove();
 
             }
 
@@ -52,11 +54,15 @@
             align-items: center;
             height: 100vh;
         }
+        @font-face {
+            font-family: 'Cheese Burger';
+            src: url('Cheese Burger.otf') format('opentype');
+        }
 
         #textCaring {
             font-size: 24px;
+            font-family: 'Cheese Burger';
         }
-
         .imgSad {
             width: 250px;
         }
@@ -66,8 +72,16 @@
             color: #ffffff;
             padding: 10px 20px;
             border: none;
-            cursor: pointer;
-            
+            cursor: pointer;   
+            border-radius: 15px;
+            height: 40px;
+
+        }
+
+        .bu:hover {background-color: rgb(141, 3, 68);}
+        .bu:active {
+            background-color: rgb(233, 154, 184);
+            transform: translateY(4px);
         }
 
     </style>
