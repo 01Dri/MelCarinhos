@@ -1,0 +1,60 @@
+body {
+    background-color: pink;
+}
+
+.centered-container {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+@font-face {
+    font-family: 'Cheese Burger';
+    src: url('Cheese Burger.otf') format('opentype');
+}
+
+#textCaring {
+    font-size: 24px;
+    font-family: 'Cheese Burger';
+}
+.imgSad {
+    width: 250px;
+}
+
+.bu {
+    background-color: rgb(223, 109, 128);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;   
+    border-radius: 15px;
+    height: 40px;
+
+}
+
+.bu:hover {background-color: rgb(141, 3, 68);}
+.bu:active {
+    background-color: rgb(233, 154, 184);
+    transform: translateY(4px);
+}
+
+.hidden {
+    display: none;
+    font-size: 24px;
+    position: absolute;
+    color: green;
+}
+
+#animação {
+    animation: fade 1s linear;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Cheese Burger';
+}
+
+@keyframes fade {
+    0% { opacity: 1; top: 0; }
+    70% { opacity: 0; top: -30px; }
+    100% { opacity: 0; top: -30px; }
+}
