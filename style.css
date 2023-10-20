@@ -1,14 +1,17 @@
 body {
-    background-color: pink;
+    background: linear-gradient(to bottom, pink, #ff66b2); 
+    background-size: 100% 200%; 
+    animation: gradientAnimation 10s infinite alternate;
 }
 
 .centered-container {
-    display: flex;  
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+
 @font-face {
     font-family: 'Cheese Burger';
     src: url('Cheese Burger.otf') format('opentype');
@@ -18,6 +21,7 @@ body {
     font-size: 24px;
     font-family: 'Cheese Burger';
 }
+
 .imgSad {
     width: 250px;
 }
@@ -27,13 +31,16 @@ body {
     color: #ffffff;
     padding: 10px 20px;
     border: none;
-    cursor: pointer;   
+    cursor: pointer;
     border-radius: 15px;
     height: 40px;
-
+    transition: background-color 0.3s; 
 }
 
-.bu:hover {background-color: rgb(141, 3, 68);}
+.bu:hover {
+    background-color: rgb(141, 3, 68);
+}
+
 .bu:active {
     background-color: rgb(233, 154, 184);
     transform: translateY(4px);
@@ -57,4 +64,13 @@ body {
     0% { opacity: 1; top: 0; }
     70% { opacity: 0; top: -30px; }
     100% { opacity: 0; top: -30px; }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
 }
